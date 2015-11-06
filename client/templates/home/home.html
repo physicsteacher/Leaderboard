@@ -1,0 +1,47 @@
+<template name ="home">
+
+  <h3>Leaderboard</h3>
+{{#if currentUser}}
+  <div class = "row">
+
+    <div class="col-sm-8">
+      <ul class="list-group">
+        {{#each Divisions}}
+        <li class = "list-group-item {{selectedClass}}">  {{name}} - {{score}}</li>
+        {{/each}}
+      </ul>
+  </div>
+
+</div>
+
+
+<button type="button" class = "btn btn-lg btn-success">Give {{showSelected.name}} a Point</button>
+<button type="button" class = "btn btn-lg btn-danger">Take a Point From {{showSelected.name}}</button>
+
+{{else}}
+  <div class = "row">
+    <div class="col-sm-4">
+    <div class="btn-group">
+      <button type="button" class="form-control btn btn-default dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
+         Select a Corps
+         <span class="caret"></span>
+       </button>
+       <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" role="menu">
+         {{#each Corps}}
+         <li><a href="#">{{corps}}</a></li>
+         {{/each}}
+       </ul>
+     </div>
+   </div>
+    <div class="col-sm-8">
+      <ul class="list-group">
+        {{#each Divisions2}}
+        <li class = "list-group-item">  {{name}} - {{score}}</li>
+        {{/each}}
+      </ul>
+  </div>
+
+</div>
+
+{{/if}}
+</template>
