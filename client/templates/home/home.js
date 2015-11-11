@@ -1,5 +1,8 @@
-Meteor.subscribe('theDivisions');
-Meteor.subscribe('theCorps');
+Meteor.subscribe('divisions');
+
+
+Meteor.subscribe('corps');
+
 
 Template.home.helpers({
 //original

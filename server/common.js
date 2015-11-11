@@ -1,8 +1,8 @@
-Meteor.publish('theDivisions', function(){
+Meteor.publish('divisions', function(){
   return Divisions.find()
 });
 
-Meteor.publish('theCorps', function(){
+Meteor.publish('corps', function(){
   return Corps.find()
 });
 
